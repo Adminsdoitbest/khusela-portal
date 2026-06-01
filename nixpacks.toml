@@ -1,0 +1,8 @@
+[phases.setup]
+nixPkgs = ["python311", "playwright-driver", "nss", "nspr", "atk", "cups", "libdrm", "dbus", "libxkbcommon", "at-spi2-atk", "xorg.libX11", "xorg.libXcomposite", "xorg.libXdamage", "xorg.libXext", "xorg.libXfixes", "xorg.libXrandr", "mesa", "expat", "xorg.libxcb", "libxshmfence", "pango", "cairo", "alsa-lib"]
+
+[phases.install]
+cmds = ["pip install -r requirements.txt", "playwright install chromium", "playwright install-deps chromium"]
+
+[start]
+cmd = "python app.py"
